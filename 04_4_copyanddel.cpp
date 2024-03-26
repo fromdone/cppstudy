@@ -7,20 +7,20 @@ class String {
     int len;
 
     public:
-    //cë¥¼ në²ˆ ë°˜ë³µí•˜ëŠ” ìƒì„±ì
+    //cë¥? në²? ë°˜ë³µ?•˜?Š” ?ƒ?„±?
     String(char c, int n);
-    //ì…ë ¥í•œ ë¬¸ìì—´ì„ ë‹´ëŠ” ìƒì„±ì
+    //?…? ¥?•œ ë¬¸ì?—´?„ ?‹´?Š” ?ƒ?„±?
     String(const char *string);
-    //ë³µì‚¬ ìƒì„±ì
+    //ë³µì‚¬ ?ƒ?„±?
     String(const String& string);
-    // //ì†Œë©¸ì
+    // //?†Œë©¸ì
     ~String();
 
-    //í•¨ìˆ˜
+    //?•¨?ˆ˜
     void PrintString();
-    void AddString(const String &s); //ê¸°ì¡´ ë¬¸ìì—´ ë’¤ì— së¥¼ ì¶”ê°€
-    void CopyString(const String &s); //ê¸°ì¡´ ë¬¸ìì—´ì„ së¡œ ë³€ê²½
-    int StrLen(); //ë¬¸ìì—´ì˜ ê¸¸ì´ë¥¼ ì¶œë ¥
+    void AddString(const String &s); //ê¸°ì¡´ ë¬¸ì?—´ ?’¤?— së¥? ì¶”ê??
+    void CopyString(const String &s); //ê¸°ì¡´ ë¬¸ì?—´?„ së¡? ë³?ê²?
+    int StrLen(); //ë¬¸ì?—´?˜ ê¸¸ì´ë¥? ì¶œë ¥
     
 };
 
@@ -38,7 +38,7 @@ String::String(const char *string) {
     strcpy(str, string);
 }
 String::String(const String &string) {
-    //strì€ í¬ì¸í„°ì´ë¯€ë¡œ ê·¸ëŒ€ë¡œ ë³µì‚¬í•˜ë©´ ë¬¸ì œì˜ ì†Œì§€ê°€ ìˆì–´ ê¹Šì€ ë³µì‚¬ í•„ìš”
+    //str??? ?¬?¸?„°?´ë¯?ë¡? ê·¸ë??ë¡? ë³µì‚¬?•˜ë©? ë¬¸ì œ?˜ ?†Œì§?ê°? ?ˆ?–´ ê¹Šì?? ë³µì‚¬ ?•„?š”
     str = new char[strlen(string.str)+1];
     strcpy(str, string.str);
     len = string.len;
@@ -46,8 +46,8 @@ String::String(const String &string) {
     // char *pt1 = string.str;
     // char *pt2 = str;
     
-    // std::cout << "ì› ìŠ¤íŠ¸ë§ì˜ ì£¼ì†ŒëŠ” " << static_cast<void*>(pt1) << std::endl;
-    // std::cout << "ë³µì‚¬ëœ ìŠ¤íŠ¸ë§ì˜ ì£¼ì†ŒëŠ” " << reinterpret_cast<void*>(pt2) << std::endl;
+    // std::cout << "?› ?Š¤?Š¸ë§ì˜ ì£¼ì†Œ?Š” " << static_cast<void*>(pt1) << std::endl;
+    // std::cout << "ë³µì‚¬?œ ?Š¤?Š¸ë§ì˜ ì£¼ì†Œ?Š” " << reinterpret_cast<void*>(pt2) << std::endl;
 }
 String::~String() {
     if (str) {
@@ -56,7 +56,7 @@ String::~String() {
 }
 
 void String::PrintString() {
-    std::cout << "ì…ë ¥ë˜ì–´ ìˆëŠ” ë¬¸ì¥ì€ " << str << "ì…ë‹ˆë‹¤." << std::endl;
+    std::cout << "?…? ¥?˜?–´ ?ˆ?Š” ë¬¸ì¥??? " << str << "?…?‹ˆ?‹¤." << std::endl;
     return;
 }
 void String::AddString(const String &s) {

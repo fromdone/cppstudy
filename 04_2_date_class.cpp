@@ -38,7 +38,7 @@ int Date::GetCurrentMonthTotalDays(int _year, int _month) {
     static int month_days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     if (month != 2) {
         return month_days[_month-1];
-    } else if (_year%4 == 0 && _year%100 == 0 && _year%400 != 0) { //ìœ¤ë…„
+    } else if (_year%4 == 0 && _year%100 == 0 && _year%400 != 0) { //?œ¤?…„
         return 29;
     } else {
         return 28;
@@ -73,7 +73,7 @@ void Date::AddDay(int inc) {
 }
 
 void Date::ShowDate() {
-    std::cout << "ì˜¤ëŠ˜ì€ " << year << "ë…„ " << month << "ì›” " << day << "ì¼ ìž…ë‹ˆë‹¤." << std::endl;
+    std::cout << "?˜¤?Š˜??? " << year << "?…„ " << month << "?›” " << day << "?¼ ?ž…?‹ˆ?‹¤." << std::endl;
 }
 
 int main() {

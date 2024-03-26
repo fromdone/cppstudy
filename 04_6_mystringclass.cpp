@@ -1,45 +1,45 @@
 #include <iostream>
 #include <cstring>
 
-/* ë‚˜ë§Œì˜ ìŠ¤íŠ¸ë§ í´ë˜ìŠ¤ ë§Œë“¤ê¸° */
-//ë¬¸ì(char)ë¡œë¶€í„° ë¬¸ìì—´ ìƒì„±, ë¬¸ì í¬ì¸í„°(char *)ë¡œë¶€í„° ë¬¸ìì—´ ìƒì„±
-//ë¬¸ìì—´ ê¸¸ì´ êµ¬í•˜ëŠ” í•¨ìˆ˜
-//ë¬¸ìì—´ ë’¤ì— ë‹¤ë¥¸ ë¬¸ìì—´ ë¶™ì´ê¸°
-//ë¬¸ìì—´ì´ ê°™ì€ì§€ ë¹„êµ
-//ë¬¸ìì—´ì˜ í¬ê¸° ë¹„êµ (ì‚¬ì „ ìˆœ)
+/* ?‚˜ë§Œì˜ ?Š¤?Š¸ë§? ?´?˜?Š¤ ë§Œë“¤ê¸? */
+//ë¬¸ì(char)ë¡œë???„° ë¬¸ì?—´ ?ƒ?„±, ë¬¸ì ?¬?¸?„°(char *)ë¡œë???„° ë¬¸ì?—´ ?ƒ?„±
+//ë¬¸ì?—´ ê¸¸ì´ êµ¬í•˜?Š” ?•¨?ˆ˜
+//ë¬¸ì?—´ ?’¤?— ?‹¤ë¥? ë¬¸ì?—´ ë¶™ì´ê¸?
+//ë¬¸ì?—´?´ ê°™ì??ì§? ë¹„êµ
+//ë¬¸ì?—´?˜ ?¬ê¸? ë¹„êµ (?‚¬? „ ?ˆœ)
 
 class MyString {
     private:
-    int string_len; //ë¬¸ìì—´ì˜ ê¸¸ì´ ë³€ìˆ˜
-    char* string_text; //ë¬¸ìì—´ì˜ ë‚´ìš©ì´ ë“¤ì–´ìˆëŠ” ë°°ì—´ì„ ê°€ë¦¬í‚¤ëŠ” char* í¬ì¸í„°
-    int memory_capacity; //í•´ë‹¹ í´ë˜ìŠ¤ë¥¼ ìœ„í•´ ë©”ëª¨ë¦¬ì— í• ë‹¹ëœ ë¬¸ì ê³µê°„ì˜ ìˆ˜
+    int string_len; //ë¬¸ì?—´?˜ ê¸¸ì´ ë³??ˆ˜
+    char* string_text; //ë¬¸ì?—´?˜ ?‚´?š©?´ ?“¤?–´?ˆ?Š” ë°°ì—´?„ ê°?ë¦¬í‚¤?Š” char* ?¬?¸?„°
+    int memory_capacity; //?•´?‹¹ ?´?˜?Š¤ë¥? ?œ„?•´ ë©”ëª¨ë¦¬ì— ?• ?‹¹?œ ë¬¸ì ê³µê°„?˜ ?ˆ˜
 
     public:
-    //ìƒì„±ì
-    MyString(char c); //ì¼ë°˜ ë¬¸ìë¡œë¶€í„° í´ë˜ìŠ¤ ìƒì„±
-    MyString(const char* str); //ë¬¸ìì—´ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°ë¡œë¶€í„° í´ë˜ìŠ¤ ìƒì„±
-    MyString(const MyString& str); //ë‹¤ë¥¸ MyString í´ë˜ìŠ¤ë¡œë¶€í„° í´ë˜ìŠ¤ ìƒì„±
-    //ì†Œë©¸ì
+    //?ƒ?„±?
+    MyString(char c); //?¼ë°? ë¬¸ìë¡œë???„° ?´?˜?Š¤ ?ƒ?„±
+    MyString(const char* str); //ë¬¸ì?—´?„ ê°?ë¦¬í‚¤?Š” ?¬?¸?„°ë¡œë???„° ?´?˜?Š¤ ?ƒ?„±
+    MyString(const MyString& str); //?‹¤ë¥? MyString ?´?˜?Š¤ë¡œë???„° ?´?˜?Š¤ ?ƒ?„±
+    //?†Œë©¸ì
     ~MyString();
-    //ë¬¸ìì—´ ê¸¸ì´ ì½ê¸° í•¨ìˆ˜
+    //ë¬¸ì?—´ ê¸¸ì´ ?½ê¸? ?•¨?ˆ˜
     int StringLen() const;
-    //ë¬¸ìì—´ ë‚´ìš© í™•ì¸ í•¨ìˆ˜
+    //ë¬¸ì?—´ ?‚´?š© ?™•?¸ ?•¨?ˆ˜
     void Print() const;
     void Println() const;
-    //ë¬¸ìì—´ ë‚´ìš© ë³€ê²½ í•¨ìˆ˜
+    //ë¬¸ì?—´ ?‚´?š© ë³?ê²? ?•¨?ˆ˜
     MyString& Assign(const MyString& str);
     MyString& Assign(const char* str);
-    //í• ë‹¹ëœ ë©”ëª¨ë¦¬ ê³µê°„ í™•ì¸
+    //?• ?‹¹?œ ë©”ëª¨ë¦? ê³µê°„ ?™•?¸
     int CheckCapacity() const;
-    //ì›í•˜ëŠ” í¬ê¸°ì˜ ë©”ëª¨ë¦¬ ê³µê°„ ë¯¸ë¦¬ í• ë‹¹
+    //?›?•˜?Š” ?¬ê¸°ì˜ ë©”ëª¨ë¦? ê³µê°„ ë¯¸ë¦¬ ?• ?‹¹
     void Reserve(int size);
-    //ë¬¸ìì—´ ì‚½ì…
+    //ë¬¸ì?—´ ?‚½?…
     MyString& Insert(int loc, const MyString& str);
     MyString& Insert(int loc, const char* str);
     MyString& Insert(int loc, char c);
 };
 
-//ë©¤ë²„ í•¨ìˆ˜ ì •ì˜ êµ¬ê°„
+//ë©¤ë²„ ?•¨?ˆ˜ ? •?˜ êµ¬ê°„
 MyString::MyString(char c) {
     string_len = 1;
     memory_capacity = 1;
@@ -87,7 +87,7 @@ void MyString::Println() const {
 }
 
 MyString& MyString::Assign(const MyString& str) {
-    if (str.string_len > memory_capacity) { //ìƒˆë¡œìš´ ë¬¸ìì—´ì´ í• ë‹¹ëœ ê³µê°„ë³´ë‹¤ ë” ê¸¸ë©´ ë©”ëª¨ë¦¬ ê³µê°„ ìƒˆë¡œ í• ë‹¹ í•„ìš”
+    if (str.string_len > memory_capacity) { //?ƒˆë¡œìš´ ë¬¸ì?—´?´ ?• ?‹¹?œ ê³µê°„ë³´ë‹¤ ?” ê¸¸ë©´ ë©”ëª¨ë¦? ê³µê°„ ?ƒˆë¡? ?• ?‹¹ ?•„?š”
         delete[] string_text;
         string_text = new char[str.string_len];
     }
@@ -127,7 +127,7 @@ void MyString::Reserve(int size) {
 }
 
 MyString& MyString::Insert(int loc, const MyString& str) {
-    //ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ë©´ ì²˜ë¦¬í•˜ì§€ ì•ŠìŒ
+    //ë²”ìœ„ë¥? ë²—ì–´?‚˜ë©? ì²˜ë¦¬?•˜ì§? ?•Š?Œ
     if (loc < 0 || loc > string_len) {
         return *this;
     }
@@ -135,7 +135,7 @@ MyString& MyString::Insert(int loc, const MyString& str) {
 }
 
 
-//ì‹¤í–‰ë¶€
+//?‹¤?–‰ë¶?
 int main() {
     MyString line1("Hello, world!");
     std::cout << line1.CheckCapacity() << std::endl;

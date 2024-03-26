@@ -9,7 +9,7 @@ typedef struct Animal{
     int clean;
 } Animal;
 
-void create_animal(Animal* animal) { // ìƒˆë¡œìš´ ë™ë¬¼ì„ ì…ë ¥í•˜ëŠ” í•¨ìˆ˜
+void create_animal(Animal* animal) { // ?ƒˆë¡œìš´ ?™ë¬¼ì„ ?…? ¥?•˜?Š” ?•¨?ˆ˜
     std::cout << "Animal's name: ";
     std::cin >> animal->name;
 
@@ -21,7 +21,7 @@ void create_animal(Animal* animal) { // ìƒˆë¡œìš´ ë™ë¬¼ì„ ì…ë ¥í•˜ëŠ” í•¨ìˆ˜
     animal->clean = 100;
 }
 
-void play_animal(Animal* animal) { // ë™ë¬¼ì´ ë†€ê²Œ í•˜ëŠ” í•¨ìˆ˜: ëŠ¥ë ¥ì¹˜ê°€ ë³€ê²½ë¨. ì¸ìë¡œ ë°›ëŠ” ê²ƒì€ ê·¸ ë™ë¬¼ì˜ êµ¬ì¡°ì²´ì˜ ì£¼ì†Œ í¬ì¸í„°
+void play_animal(Animal* animal) { // ?™ë¬¼ì´ ???ê²? ?•˜?Š” ?•¨?ˆ˜: ?Š¥? ¥ì¹˜ê?? ë³?ê²½ë¨. ?¸?ë¡? ë°›ëŠ” ê²ƒì?? ê·? ?™ë¬¼ì˜ êµ¬ì¡°ì²´ì˜ ì£¼ì†Œ ?¬?¸?„°
     animal->health -= 10;
     animal->food -= 20;
     animal->clean -= 30;
@@ -41,7 +41,7 @@ void show_animal_stat(Animal* animal) {
 }
 
 int main() {
-    Animal* list[10]; // Animal* íƒ€ì…ì˜ ìš”ì†Œ 10ê°œê°€ ë“¤ì–´ê°€ëŠ” ë¦¬ìŠ¤íŠ¸ë¥¼ ì„ ì–¸
+    Animal* list[10]; // Animal* ????…?˜ ?š”?†Œ 10ê°œê?? ?“¤?–´ê°??Š” ë¦¬ìŠ¤?Š¸ë¥? ?„ ?–¸
     int animal_num = 0;
 
     for (;;) {
@@ -55,13 +55,13 @@ int main() {
         switch (input) {
             int play_with;
 
-            case 1: //ë™ë¬¼ ì¶”ê°€í•˜ê¸°
-                list[animal_num] = new Animal; //Animal íƒ€ì… êµ¬ì¡°ì²´ë§Œí¼ì˜ ë©”ëª¨ë¦¬ë¥¼ í™ì— í• ë‹¹í•˜ì—¬ ì£¼ì†Œë¥¼ list[animal_num]ì— í• ë‹¹
-                create_animal(list[animal_num]); //í•´ë‹¹ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” êµ¬ì¡°ì²´ì— ëŒ€í•´ ë‚´ìš©ì„ ì±„ìš°ëŠ” í•¨ìˆ˜ í˜¸ì¶œ
-                animal_num++; //ì™„ë£Œë˜ë©´ ë¦¬ìŠ¤íŠ¸ ìœ„ì¹˜ë¥¼ í•˜ë‚˜ ìœ„ë¡œ
+            case 1: //?™ë¬? ì¶”ê???•˜ê¸?
+                list[animal_num] = new Animal; //Animal ????… êµ¬ì¡°ì²´ë§Œ?¼?˜ ë©”ëª¨ë¦¬ë?? ?™?— ?• ?‹¹?•˜?—¬ ì£¼ì†Œë¥? list[animal_num]?— ?• ?‹¹
+                create_animal(list[animal_num]); //?•´?‹¹ ì£¼ì†Œê°? ê°?ë¦¬í‚¤?Š” êµ¬ì¡°ì²´ì— ????•´ ?‚´?š©?„ ì±„ìš°?Š” ?•¨?ˆ˜ ?˜¸ì¶?
+                animal_num++; //?™„ë£Œë˜ë©? ë¦¬ìŠ¤?Š¸ ?œ„ì¹˜ë?? ?•˜?‚˜ ?œ„ë¡?
                 break;
 
-            case 2: //ë™ë¬¼ê³¼ ë†€ê¸°
+            case 2: //?™ë¬¼ê³¼ ???ê¸?
                 std::cout << "Which animal do you want to play with?: ";
                 std::cin >> play_with;
 
@@ -73,7 +73,7 @@ int main() {
 
                 break;
 
-            case 3: //ìƒíƒœ ë³´ê¸°
+            case 3: //?ƒ?ƒœ ë³´ê¸°
                 std::cout << "Which animal do you want to check?: ";
                 std::cin >> play_with;
 

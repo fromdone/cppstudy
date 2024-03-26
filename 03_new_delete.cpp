@@ -3,7 +3,7 @@
 /* new and delete */
 
 // int main() {
-//     int *p = new int; //int í¬ê¸° ê³µê°„ì„ í• ë‹¹í•˜ê³  ê·¸ ì£¼ì†Œë¥¼ pì— í• ë‹¹ (ê°’ì€ ì—†ìŒ!)
+//     int *p = new int; //int ?¬ê¸? ê³µê°„?„ ?• ?‹¹?•˜ê³? ê·? ì£¼ì†Œë¥? p?— ?• ?‹¹ (ê°’ì?? ?—†?Œ!)
 //     *p = 10;
 
 //     std::cout << *p << std::endl;
@@ -19,7 +19,7 @@ int main() {
     std::cout << "array size: ";
     std::cin >> arr_size;
 
-    int *list = new int[arr_size]; //listë¼ëŠ” int í¬ì¸í„°ì— int ë°°ì—´ì˜ ì£¼ì†Œë¥¼ í• ë‹¹
+    int *list = new int[arr_size]; //list?¼?Š” int ?¬?¸?„°?— int ë°°ì—´?˜ ì£¼ì†Œë¥? ?• ?‹¹
 
     for (int i = 0; i < arr_size; i++) {
         std::cin >> list[i];

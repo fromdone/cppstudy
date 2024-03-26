@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include <cmath>
 
-/* ì¤‘í•™ìƒìš© ê¸°í•˜í•™ ì†Œí”„íŠ¸ì›¨ì–´ */
-//í´ë˜ìŠ¤ëŠ” ë‘ ê°œ: Point(ì ì— ê´€í•œ ì •ë³´ë¥¼ ë‹´ìŒ), Geometry(ì ì„ ê°€ì§€ê³  ì—°ì‚°)
+/* ì¤‘í•™?ƒ?š© ê¸°í•˜?•™ ?†Œ?”„?Š¸?›¨?–´ */
+//?´?˜?Š¤?Š” ?‘ ê°?: Point(? ?— ê´??•œ ? •ë³´ë?? ?‹´?Œ), Geometry(? ?„ ê°?ì§?ê³? ?—°?‚°)
 
 class Point {
     private:
@@ -11,7 +11,7 @@ class Point {
     int y;
 
     public:
-    Point(int _x, int _y) { //íŒ¨ëŸ¬ë¯¸í„° í¬í•¨ ìƒì„±ì
+    Point(int _x, int _y) { //?Œ¨?Ÿ¬ë¯¸í„° ?¬?•¨ ?ƒ?„±?
         x = _x;
         y = _y;
     }
@@ -25,28 +25,28 @@ class Point {
 
 class Geometry {
     private:
-    Point* point_array[100]; // Point í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œë¥¼ 100ê°œ ë‹´ëŠ” ë°°ì—´
+    Point* point_array[100]; // Point ?´?˜?Š¤?˜ ?¸?Š¤?„´?Š¤ë¥? ê°?ë¦¬í‚¤?Š” ì£¼ì†Œë¥? 100ê°? ?‹´?Š” ë°°ì—´
     int num_of_points;
 
     public:
-    //Geometry í´ë˜ìŠ¤ì˜ ìƒì„±ì
+    //Geometry ?´?˜?Š¤?˜ ?ƒ?„±?
     Geometry() {
         num_of_points = 0;
     }
 
-    //Geometry ì¸ìŠ¤í„´ìŠ¤ì— ì ì„ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
-    void AddPoint(const Point &point) { // ì¸ìŠ¤í„´ìŠ¤ë¥¼ const ì°¸ì¡°ë¡œ ì¸ìë¡œ ê°€ì ¸ì˜´
+    //Geometry ?¸?Š¤?„´?Š¤?— ? ?„ ì¶”ê???•˜?Š” ?•¨?ˆ˜
+    void AddPoint(const Point &point) { // ?¸?Š¤?„´?Š¤ë¥? const ì°¸ì¡°ë¡? ?¸?ë¡? ê°?? ¸?˜´
         point_array[num_of_points] = new Point(point.GetX(), point.GetY());
         num_of_points++;
     }
 
-    //ëª¨ë“  ì ë“¤ ê°„ì˜ ê±°ë¦¬ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+    //ëª¨ë“  ? ?“¤ ê°„ì˜ ê±°ë¦¬ë¥? ì¶œë ¥?•˜?Š” ?•¨?ˆ˜
     void PrintDistances() {
         int dx, dy;
         double dist;
 
         if (num_of_points < 2) {
-            std::cout << "ì ì´ í•˜ë‚˜ë°–ì— ì—†ìŠµë‹ˆë‹¤." << std::endl;
+            std::cout << "? ?´ ?•˜?‚˜ë°–ì— ?—†?Šµ?‹ˆ?‹¤." << std::endl;
             return;
         }
 
@@ -55,13 +55,13 @@ class Geometry {
                 dx = abs((point_array[i]->GetX())-(point_array[j]->GetX()));
                 dy = abs((point_array[i]->GetY())-(point_array[j]->GetY()));
                 dist = std::sqrt(std::pow(dx, 2)+std::pow(dy, 2));
-                std::cout << (i+1) << "ë²ˆì§¸ ì ê³¼ " << (j+1) << "ë²ˆì§¸ ì  ì‚¬ì´ì˜ ê±°ë¦¬ëŠ” " << dist << "ì…ë‹ˆë‹¤." << std::endl;
+                std::cout << (i+1) << "ë²ˆì§¸ ? ê³? " << (j+1) << "ë²ˆì§¸ ?  ?‚¬?´?˜ ê±°ë¦¬?Š” " << dist << "?…?‹ˆ?‹¤." << std::endl;
             }
         }
         return;
     }
 
-    //ëª¨ë“  ì ë“¤ì„ ì‡ëŠ” ì§ì„ ë“¤ ì‚¬ì´ì˜ êµì ì˜ ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+    //ëª¨ë“  ? ?“¤?„ ?‡?Š” ì§ì„ ?“¤ ?‚¬?´?˜ êµì ?˜ ?ˆ˜ë¥? ì¶œë ¥?•˜?Š” ?•¨?ˆ˜
     void PrintMeetNums() {
         double slope1;
         double slope2;
@@ -86,14 +86,14 @@ class Geometry {
             }
         }
         num_of_cross += num_of_points;
-        std::cout << "êµì°¨ì ì˜ ìˆ˜ëŠ” " << num_of_cross << "ê°œ ì…ë‹ˆë‹¤.";
+        std::cout << "êµì°¨? ?˜ ?ˆ˜?Š” " << num_of_cross << "ê°? ?…?‹ˆ?‹¤.";
         return;
     }
 
-    //ì…ë ¥ë˜ì–´ ìˆëŠ” ëª¨ë“  ì ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+    //?…? ¥?˜?–´ ?ˆ?Š” ëª¨ë“  ? ?„ ì¶œë ¥?•˜?Š” ?•¨?ˆ˜
     void PrintPoints() {
         for (int i = 0; i < num_of_points; i++) {
-            std::cout << i+1 << "ë²ˆì§¸ ê³µê°„ì—ëŠ” (" << point_array[i]->GetX() << "," << point_array[i]->GetY() << ")ê°€ ìˆìŠµë‹ˆë‹¤." << std::endl;
+            std::cout << i+1 << "ë²ˆì§¸ ê³µê°„?—?Š” (" << point_array[i]->GetX() << "," << point_array[i]->GetY() << ")ê°? ?ˆ?Šµ?‹ˆ?‹¤." << std::endl;
         }
     }
 
@@ -104,28 +104,28 @@ int main() {
     int entered_point_num = 0;
     Geometry gm;
 
-    std::cout << "---ê¸°í•˜í•™ ê³„ì‚°ê¸°---" << std::endl;
+    std::cout << "---ê¸°í•˜?•™ ê³„ì‚°ê¸?---" << std::endl;
 
     while (true) {
         int x, y;
 
-        std::cout << "ì–´ë–¤ ê¸°ëŠ¥ì„ ì‚¬ìš©í•˜ì‹œê² ì–´ìš”?" << std::endl;
-        std::cout << "1 - ì  ì¶”ê°€í•˜ê¸°" << std::endl;
-        std::cout << "2 - ì…ë ¥ëœ ì ë“¤ ì‚¬ì´ì˜ ê±°ë¦¬ êµ¬í•˜ê¸°" << std::endl;
-        std::cout << "3 - ì…ë ¥ëœ ì ë“¤ì„ ëª¨ë‘ ì´ì—ˆì„ ë•Œì˜ êµì  ìˆ˜ êµ¬í•˜ê¸°" << std::endl;
-        std::cout << "0 - ì…ë ¥ë˜ì–´ ìˆëŠ” ì ë“¤ì˜ ëª©ë¡ í™•ì¸í•˜ê¸°" << std::endl;
+        std::cout << "?–´?–¤ ê¸°ëŠ¥?„ ?‚¬?š©?•˜?‹œê² ì–´?š”?" << std::endl;
+        std::cout << "1 - ?  ì¶”ê???•˜ê¸?" << std::endl;
+        std::cout << "2 - ?…? ¥?œ ? ?“¤ ?‚¬?´?˜ ê±°ë¦¬ êµ¬í•˜ê¸?" << std::endl;
+        std::cout << "3 - ?…? ¥?œ ? ?“¤?„ ëª¨ë‘ ?´?—ˆ?„ ?•Œ?˜ êµì  ?ˆ˜ êµ¬í•˜ê¸?" << std::endl;
+        std::cout << "0 - ?…? ¥?˜?–´ ?ˆ?Š” ? ?“¤?˜ ëª©ë¡ ?™•?¸?•˜ê¸?" << std::endl;
 
         std::cin >> input;
 
         switch(input) {
             case 1: { 
-                std::cout << "ì ì˜ X ì¢Œí‘œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ";
+                std::cout << "? ?˜ X ì¢Œí‘œë¥? ?…? ¥?•´ì£¼ì„¸?š”: ";
                 std::cin >> x;
-                std::cout << "ì ì˜ Y ì¢Œí‘œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ";
+                std::cout << "? ?˜ Y ì¢Œí‘œë¥? ?…? ¥?•´ì£¼ì„¸?š”: ";
                 std::cin >> y;
                 Point point(x, y);
                 gm.AddPoint(point);
-                std::cout << "ì…ë ¥í•˜ì‹  (" << x << ", " << y << ")ê°€ " << entered_point_num+1 << "ë²ˆì§¸ ê³µê°„ì— ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤." << std::endl;
+                std::cout << "?…? ¥?•˜?‹  (" << x << ", " << y << ")ê°? " << entered_point_num+1 << "ë²ˆì§¸ ê³µê°„?— ????¥?˜?—ˆ?Šµ?‹ˆ?‹¤." << std::endl;
                 entered_point_num += 1;
                 break;
             }                
